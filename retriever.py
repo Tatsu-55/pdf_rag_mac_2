@@ -15,7 +15,6 @@ client = chromadb.PersistentClient(path=persist_directory)
 vectorstore = Chroma(collection_name=collection_name, embedding_function=OpenAIEmbeddings(), client=client)
 docstore = InMemoryStore()
 
-
 #ベクトルストアを生成する関数を作成する(テキスト、テーブル、画像の要素の追加を含む)
 def create_vectorstore(texts):
 
